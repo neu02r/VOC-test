@@ -61,7 +61,7 @@ def subject(review):
     return response.choices[0].message.content
 
 
-
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 df = load_data()
 
