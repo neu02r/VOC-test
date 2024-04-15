@@ -27,7 +27,7 @@ def analyze_review(review):
             ],
         
     )
-    
+
     summary = response.choices[0].message.content 
     return summary
 
