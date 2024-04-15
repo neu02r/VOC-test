@@ -39,7 +39,7 @@ def subject(review):
     response = client.chat.completions.create(
         model = "gpt-4-turbo-preview",  # 또는 최신 GPT 모델 사용
         messages = [
-            {"role": "system", "content":"Tell me the top three positive and three negative topics that are mentioned in these reviews. Also, indicate the number of reviews for each topic. \
+            {"role": "system", "content":"Tell me the top three positive and three negative topics that are mentioned in these reviews. \
                                           Each review is separated by '//'. \
                                           Use line wrapping, indentation, etc. to make it look good. \
                                          한글로 답변해줘. 답변은 무조건 제공된 데이터를 기반으로 해야해. "},
