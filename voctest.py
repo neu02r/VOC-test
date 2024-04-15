@@ -4,7 +4,7 @@ import openai
 
 @st.cache_data
 def load_data():
-    data = pd.read_excel(r"C:\Users\speed\Desktop\리뷰.xlsx")
+    data = pd.read_excel(r"리뷰.xlsx")
     data['리뷰'] = data['리뷰'].astype(str)
     data['브랜드'] = data['브랜드'].astype(str)
     data['평점'] = pd.to_numeric(data['평점'], errors='coerce')
