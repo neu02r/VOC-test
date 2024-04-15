@@ -3,6 +3,8 @@ import pandas as pd
 import openai
 import openpyxl
 
+api_key = st.secrets["openai_key"]
+
 @st.cache_data
 def load_data():
     data = pd.read_excel(r"리뷰.xlsx")
@@ -13,7 +15,7 @@ def load_data():
 
 @st.cache_data
 def analyze_review(review):
-    client = openai.OpenAI(api_key="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")
+    client = openai.OpenAI(api_key=api_key)
     
     response = client.chat.completions.create(
         model = "gpt-4-turbo-preview",  # 또는 최신 GPT 모델 사용
@@ -33,7 +35,7 @@ def analyze_review(review):
 
 @st.cache_data
 def subject(review):
-    client = openai.OpenAI(api_key="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")
+    client = openai.OpenAI(api_key="api_key")
 
     response = client.chat.completions.create(
         model = "gpt-4-turbo-preview",  # 또는 최신 GPT 모델 사용
