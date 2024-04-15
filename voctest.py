@@ -14,7 +14,7 @@ def load_data():
 
 @st.cache_data
 def analyze_review(review):
-    client = openai.OpenAI(api_key='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')
+    client = openai.OpenAI(api_key='"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"')
     
     response = client.chat.completions.create(
         model = "gpt-4-turbo-preview",  # 또는 최신 GPT 모델 사용
