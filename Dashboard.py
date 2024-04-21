@@ -140,7 +140,7 @@ if __name__ == '__main__':
         
         # 그룹 누적 막대 그래프
         st.subheader('주차/브랜드별 별점 상세')
-        df_numdetail = pd.read_excel(r'C:\Users\jh980\Desktop\streamlit\testdf.xlsx')
+        df_numdetail = pd.read_excel(r'testdf.xlsx')
         sort_numdetail = sorted(df_numdetail['week'].unique(), reverse=True)
         week_selected = st.multiselect('주차들을 선택하세요.', sort_numdetail, default=sort_numdetail[0])
         
