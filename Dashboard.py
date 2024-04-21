@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 
 @st.cache_data
 def load_reviewNum():
-    data = pd.read_excel(r"C:\Users\jh980\Desktop\streamlit\test_통계.xlsx", sheet_name=None)
+    data = pd.read_excel(r"test_통계.xlsx", sheet_name=None)
     return data
 
 @st.cache_data
