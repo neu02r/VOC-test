@@ -160,6 +160,7 @@ if __name__ == '__main__':
                             '이슈': '1층배송(슈랙)',
                             '문서링크':''}])
         
-        edited_df = st.dataframe(df_issue, num_rows="dynamic", column_config={"문서링크": st.column_config.LinkColumn("문서링크")})
+        st.dataframe(df_issue)
+        # edited_df = st.data_editor(df_issue, num_rows="dynamic", column_config={"문서링크": st.column_config.LinkColumn("문서링크")})
         
 
