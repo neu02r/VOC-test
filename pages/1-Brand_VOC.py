@@ -6,6 +6,7 @@ import pandas as pd
 def load_review(week):
     data = pd.read_excel(fr"week/{week}/VOC {week} 원본.xlsx")
     data['등록일'] = data['등록일'].astype(str)
+    data['평점'] = data['평점'].astype(int)
     return data
 
 @st.cache_data
