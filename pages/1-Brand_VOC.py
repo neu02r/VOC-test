@@ -56,7 +56,6 @@ if __name__ == '__main__':
     brand_neg_summary = neg_summary(week_selected, brand_selected)
     st.write(brand_neg_summary)
 
-    st.write('\n')
     st.caption('GPT4 turbo로부터 생성됨.')
     
     if st.button('해당 리뷰 원본 보기', type='primary'):
