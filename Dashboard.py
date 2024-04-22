@@ -156,9 +156,9 @@ if __name__ == '__main__':
         
         
     with tab4:
-        df_issue = pd.DataFrame([{'주차': '15w',
-                            '이슈': '1층배송(슈랙)',
-                            '문서링크':''}])
+        df_issue = pd.DataFrame([{'주차': ['15w', 16w],
+                            '이슈': ['1층배송(슈랙)', '택배 박스로 현관문 막음'],
+                            '문서링크':'', ''}])
         
         st.dataframe(df_issue)
         # edited_df = st.data_editor(df_issue, num_rows="dynamic", column_config={"문서링크": st.column_config.LinkColumn("문서링크")})
