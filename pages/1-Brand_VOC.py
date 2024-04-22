@@ -57,7 +57,7 @@ if __name__ == '__main__':
     st.write(brand_neg_summary)
 
     st.write('\n\n')
-    st.caption('GPT4 turbo로부터 생성됨.)
+    st.caption('GPT4 turbo로부터 생성됨.')
     
     if st.button('해당 리뷰 원본 보기', type='primary'):
         neg_df = brand_df.loc[brand_df['평점'] <= 3]
