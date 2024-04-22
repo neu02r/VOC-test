@@ -74,7 +74,8 @@ if __name__ == '__main__':
     st.write('\n\n')
     st.subheader(f"{brand_selected} 주제별 요약")
     brand_keyvalue_summary = keyvalue_summary(brand_selected)
-    st.write(brand_keyvalue_summary)
+    st.write('...')
+    #st.write(brand_keyvalue_summary)
     
     st.divider()
     
