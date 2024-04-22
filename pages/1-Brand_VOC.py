@@ -12,17 +12,11 @@ def load_review(week):
 @st.cache_data
 def neg_summary(week, brand):
 
-    file = fr"week/{week}/neg/neg_스피드랙.txt"
+    file = fr"week/{week}/neg/neg_{brand}.txt"
     f = open(file, 'r')
     txt = f.read()
-    summary_speed = txt
     
-    summary_h = " "
-
-    if brand == '홈던트하우스':
-        return summary_h
-    else:
-        return summary_speed
+    return txt
 
 @st.cache_data
 def keyvalue_summary(brand):
