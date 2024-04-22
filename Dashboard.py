@@ -158,8 +158,8 @@ if __name__ == '__main__':
     with tab4:
         df_issue = pd.DataFrame([{'주차': '15w',
                             '이슈': '1층배송(슈랙)',
-                            '문서링크':'https://www.notion.so/4e738ae7abdb454e9eaefd92b73b2374?v=cfaaff5b54884d1eb036ab37a13840b6'}])
+                            '문서링크':''}])
         
-        edited_df = st.data_editor(df_issue, num_rows="dynamic", column_config={"문서링크": st.column_config.LinkColumn("문서링크")})
+        edited_df = st.dataframe(df_issue, num_rows="dynamic", column_config={"문서링크": st.column_config.LinkColumn("문서링크")})
         
 
