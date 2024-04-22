@@ -9,9 +9,9 @@ def load_review():
     return data
 
 
-def neg_summary(brand):
+def neg_summary(week, brand):
     
-    summary_speed = '.....'
+    summary_speed = fr"week/{week}/neg/neg_스피드랙.txt"
     summary_h = "고객들의 주요 불만사항은 부품 불량, 조립 어려움, 제품 파손 등 품질 이슈와 관련된 내용이 대부분입니다. \n\n기둥 각도 불량으로 인한 조립 불가, 조립 과정에서의 철제 벗겨짐, 배송 중 박스 및 제품 파손 등이 언급되었고, 이로 인해 교환이나 반품을 요청하는 사례도 있었습니다. \n\n또한 선반 규격 오류로 인한 호환성 문제, 높이 조절의 불편함 등 기능적인 측면에서도 개선이 필요한 것으로 보입니다. 전반적으로 제품의 고급스러움이 다소 부족하다는 의견도 있었습니다."
 
     if brand == '홈던트하우스':
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     # 3점 이하 불만 리뷰 요약 및 df 출력
     st.write('\n\n')
     st.subheader(f"{brand_selected} 3점 이하 리뷰 요약")
-    brand_neg_summary = neg_summary(brand_selected)
+    brand_neg_summary = neg_summary(week_selected, brand_selected)
     st.write(brand_neg_summary)
     
     if st.button('해당 리뷰 원본 보기', type='primary'):
