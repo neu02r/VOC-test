@@ -6,7 +6,6 @@ import pandas as pd
 def load_review(week):
     data = pd.read_excel(fr"week/{week}/VOC {week} 원본.xlsx")
     data['등록일'] = data['등록일'].astype(str)
-    data['평점'] = round(data['평점'], 0)
     return data
 
 @st.cache_data
@@ -60,6 +59,7 @@ if __name__ == '__main__':
     
     if st.button('해당 리뷰 원본 보기', type='primary'):
         neg_df = brand_df.loc[brand_df['평점'] <= 3]
+        neg_df['평점'] = round(neg_df['평점'], 0)
         st.dataframe(data=neg_df)
     
     st.divider()
