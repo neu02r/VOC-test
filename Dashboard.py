@@ -146,7 +146,7 @@ if __name__ == '__main__':
         
         if week_selected:
             df_numdetail = df_numdetail.loc[df_numdetail['week'].isin(week_selected)]
-            fig_numdetail = px.bar(df_numdetail, x="brand", y="ratio", hover_data="N", facet_col="week", color="scores")
+            fig_numdetail = px.bar(df_numdetail, x="brand", y="N", hover_data="ratio", facet_col="week", color="scores")
             st.plotly_chart(fig_numdetail, use_container_width=True)
 
 
