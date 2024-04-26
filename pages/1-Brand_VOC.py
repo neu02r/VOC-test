@@ -11,7 +11,7 @@ def load_review(week):
 @st.cache_data
 def neg_summary(week, brand):
     file = fr"week/{week}/neg/neg_{brand}.txt"
-    f = open(file, 'r', encoding='cp949')
+    f = open(file, 'r', encoding='UTF-8')
     txt = f.read()
     
     return txt
