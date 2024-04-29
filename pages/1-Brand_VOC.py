@@ -17,18 +17,15 @@ def neg_summary(week, brand):
     return txt
 
 @st.cache_data
-def keyvalue_summary(brand):
-    
-    summary_speed = '.....'
-    summary_h = ""
-
-                
-    if brand == '홈던트하우스':
-        return summary_h
-    else:
-        return summary_speed
-
-
+def keyvalue_summary(week, brand):
+    try:
+        file = fr"week/{week}/topic/주제_{brand}.txt"
+        f = open(file, 'r', encoding='UTF-8')
+        txt = f.read()
+    except:
+        txt = '...'
+        
+    return txt
 
 
 
@@ -68,9 +65,8 @@ if __name__ == '__main__':
     # 주제별 요약
     st.write('\n\n')
     st.subheader(f"{brand_selected} 주제별 요약")
-    brand_keyvalue_summary = keyvalue_summary(brand_selected)
-    st.write('...')
-    #st.write(brand_keyvalue_summary)
+    brand_keyvalue_summary = keyvalue_summary(week_selected, brand_selected)
+    st.write(brand_keyvalue_summary)
     
     st.divider()
     
