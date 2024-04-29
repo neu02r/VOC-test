@@ -37,8 +37,8 @@ if __name__ == '__main__':
     
     # 주차 선택
     weeklist = ['16w', '17w']
-    default_idx = weeklist[-1]
-    week_selected = st.sidebar.selectbox('주차를 선택하세요.', weeklist, index=default_idx)
+    weeklist = sorted(weeklist, reverse=True)
+    week_selected = st.sidebar.selectbox('주차를 선택하세요.', weeklist, index=0)
 
     # 주차별 df 로드
     df = load_review(week_selected)
