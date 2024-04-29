@@ -59,6 +59,7 @@ if __name__ == '__main__':
     if st.button('해당 리뷰 원본 보기', type='primary'):
         neg_df = brand_df.loc[brand_df['평점'] <= 3]
         neg_df['평점'] = round(neg_df['평점'], 0)
+        neg_df = neg_df.reset_index()
         st.dataframe(data=neg_df)
     
     st.divider()
