@@ -1,4 +1,4 @@
-Positive 주제:
+Positive topic:
 
 1. 품질, 내구성
 * 관련 리뷰 수: 262건 
@@ -13,7 +13,7 @@ Positive 주제:
 * 주요 내용: 깔끔하고 심플한 디자인이 공간 활용에 도움이 된다는 의견이 주를 이뤘습니다.
 
 
-Negative 주제:
+Negative topic:
 
 1. 부품 누락
 * 관련 리뷰 수: 6건
