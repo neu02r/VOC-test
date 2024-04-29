@@ -36,7 +36,9 @@ if __name__ == '__main__':
     st.title('브랜드별 VOC 분석')
     
     # 주차 선택
-    week_selected = st.sidebar.selectbox('주차를 선택하세요.', ['16w', '17w'], index=-1)
+    weeklist = ['16w', '17w']
+    default_idx = weeklist[-1]
+    week_selected = st.sidebar.selectbox('주차를 선택하세요.', weeklist, index=default_idx)
 
     # 주차별 df 로드
     df = load_review(week_selected)
